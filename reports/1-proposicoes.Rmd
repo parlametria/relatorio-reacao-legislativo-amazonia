@@ -35,7 +35,8 @@ source(here::here("reports/autorias.R"))
 ```
 
 ```{r}
-proposicoes = read_proposicoes()
+proposicoes = read_proposicoes()  
+
 detalhes_autorias = read_autorias_det()
 resumo_autorias = read_autorias_res() %>%  select(-situacao,
                                                   -em_exercicio,
@@ -46,7 +47,7 @@ resumo_autorias = read_autorias_res() %>%  select(-situacao,
 
 ## Proposições consideradas
 
-Estamos examinando `r NROW(proposicoes)` proposições dos seguintes tipos:
+Estamos examinando `r NROW(proposicoes)` proposições.
 
 ```{r fig.height=3}
 proposicoes %>% 
@@ -106,8 +107,12 @@ tramitacao = proposicoes %>%
   filter(!is.na(situacao)) %>%
   separate(situacao, c("situacao", "resto"), sep = "[-.]") %>%
   mutate(situacao = if_else(casa_origem == "senado", resto, situacao)) %>%
-  mutate(situacao = str_to_sentence(situacao) %>% str_replace("de relator", "do relator") %>% str_trim()) %>%
-  mutate(situacao = if_else(str_detect(situacao, "Aguardando parecer"), "Aguardando parecer", situacao)) 
+  mutate(situacao = str_to_sentence(situacao) %>% str_replace("de relator", "do relator") %>% str_replace("Retirada", "Retirado") %>% str_trim()) %>%
+  mutate(situacao = if_else(
+    str_detect(situacao, "Aguardando parecer"),
+    "Aguardando parecer",
+    situacao
+  ))
 
 tramitacao %>% 
   count(situacao) %>%
