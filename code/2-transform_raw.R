@@ -8,7 +8,7 @@ source(here::here("code/read_raw.R"))
 #'
 transform_proposicoes <-
   function(raw_data = "data/leggo_data/proposicoes.csv") {
-    proposicoes_leggo = read_proposicoes_raw(raw_data)
+    proposicoes_leggo = read_proposicoes_raw(raw_data) 
     proposicoes_input = read_proposicoes_input_raw() %>%
       select(proposicao, tema, situacao, norma_atacada)
     

@@ -33,12 +33,13 @@ theme_set(theme_ipsum_rc())
 source(here::here("code/read_ready.R"))
 ```
 
-TO DO incluir parlamentares com zero ações
+<!-- TO DO incluir parlamentares com zero ações -->
 
 ```{r}
 proposicoes = read_proposicoes()
 detalhes_atuacao = read_atuacao()
 resumo_atuacao = detalhes_atuacao %>%
+  filter(!is.na(nome_autor), !(tipo_acao %in% c("Outros", "Recurso", "Parecer"))) %>% 
   group_by(casa,
            nome_autor,
            partido,
@@ -50,17 +51,18 @@ resumo_atuacao = detalhes_atuacao %>%
             .groups = "drop")
 ```
 
-Considerando e ignorando proposições apensadas
+<!-- Considerando e ignorando proposições apensadas -->
 
-```{r}
+```{r fig.height=8, fig.width=8}
 resumo_atuacao  %>%
-  filter(acoes >= 5) %>%
+  group_by(casa) %>% 
+  filter(acoes >= 5 | casa == "senado") %>%
   ggplot(aes(
     x = reorder(nome_autor, acoes, sum),
     y = acoes,
     fill = tipo_generico
   )) +
-  facet_wrap(~ casa) +
+  facet_grid(casa ~ ., scales = "free") +
   geom_chicklet() +
   coord_flip() +
   scale_fill_brewer(palette = "Accent") +
@@ -68,8 +70,7 @@ resumo_atuacao  %>%
     x = "",
     y = "Açòes",
     fill = "Tipo da ação",
-    title = "Parlamentares mais atuantes",
-    subtitle = "Com ao menos 5 ações"
+    title = "Parlamentares mais atuantes"
   )
 ```
 
@@ -81,9 +82,16 @@ resumo_atuacao %>%
            uf,
            governismo,
            peso_politico) %>% 
-  summarise(acoes = sum(acoes)) %>% 
+  summarise(acoes = sum(acoes), 
+            .groups = "drop") %>% 
   ggplot(aes(x = governismo, y = acoes)) + 
-  geom_point()
+  geom_point(size = 1.8, alpha = .6, color = "brown") + 
+  labs(
+    title = "Correlação entre governismo e atuação nas PDLs", 
+    subtitle = "Parlamentares de oposição atuaram mais", 
+    y = "Ações", 
+    x = "Governismo (neg. significa oposição)"
+  )
   
 ```
 

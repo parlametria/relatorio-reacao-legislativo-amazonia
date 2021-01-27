@@ -31,7 +31,8 @@ transform_input_proposicoes <-
           dominio == "www.congressonacional.leg.br" ~ "congresso",
           dominio ==  "www25.senado.leg.br" ~ "senado",
           TRUE ~ NA_character_
-        )
+        ), 
+        tema = stringr::str_to_title(tema)
       ) %>%
       rowwise() %>%
       mutate(id_prop = .extract_id(url, origem)) %>%

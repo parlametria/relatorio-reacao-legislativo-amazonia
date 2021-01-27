@@ -7,7 +7,18 @@ read_proposicoes = function() {
       .default = col_character(),
       data_apresentacao = col_datetime(format = "")
     )
-  )
+  ) %>%
+    arrange(data_apresentacao) %>%
+    group_by(id_leggo) %>%
+    slice(1) %>%
+    filter(!(nome_proposicao == "PDL 28/2019" &
+               is.na(casa_origem))) %>%
+    ungroup() %>%
+    mutate(situacao = if_else(
+      nome_proposicao %in% c("PDL 25/2019", "PDL 28/2019"),
+      "zzz - Aguardando Parecer",
+      situacao
+    ))
 }
 
 read_autorias_res = function() {
