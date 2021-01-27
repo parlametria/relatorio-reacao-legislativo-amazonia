@@ -18,7 +18,7 @@ transform_proposicoes <-
           "{sigla_tipo} {numero}/{lubridate::year(data_apresentacao)}"
         )
       ) %>%
-      left_join(proposicoes_input, by = c("nome_proposicao" = "proposicao"))
+      inner_join(proposicoes_input, by = c("nome_proposicao" = "proposicao"))
     
     out_props = "data/ready/proposicoes.csv"
     proposicoes_tudo %>%  # temos uma linha por casa da proposição
