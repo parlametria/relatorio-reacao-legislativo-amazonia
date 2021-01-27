@@ -1,11 +1,5 @@
 id_principal,id_documento,casa,nome_autor,partido,uf,tipo_autor,id_autor
-145213,8901489,senado,Senador Fabiano Contarato ,REDE,ES,senador,5953
-145213,8901489,senado,Senadora Mara Gabrilli ,PSDB,SP,senador,5376
-145213,8901521,senado,Senadora Mara Gabrilli ,PSDB,SP,senador,5376
 136417,7943254,senado,Senador Fabiano Contarato ,REDE,ES,senador,5953
-140199,8054689,senado,Senador Paulo Rocha ,PT,PA,senador,374
-140199,8054689,senado,Senadora Zenaide Maia ,PROS,RN,senador,5783
-140199,8054689,senado,Senadora Eliziane Gama ,CIDADANIA,MA,senador,5718
 140619,8064862,senado,Senador Rogério Carvalho ,PT,SE,senador,5352
 140619,8064862,senado,Senador Paulo Rocha ,PT,PA,senador,374
 140619,8064862,senado,Senador Humberto Costa ,PT,PE,senador,5008
@@ -30,18 +24,6 @@ id_principal,id_documento,casa,nome_autor,partido,uf,tipo_autor,id_autor
 141084,8074041,senado,Senadora Zenaide Maia ,PROS,RN,senador,5783
 141764,8102529,senado,Senador Randolfe Rodrigues ,REDE,AP,senador,5012
 141764,8102545,senado,Senador Randolfe Rodrigues ,REDE,AP,senador,5012
-141878,8108046,senado,Senador Rogério Carvalho ,PT,SE,senador,5352
-141878,8108046,senado,Senador Jaques Wagner ,PT,BA,senador,581
-141878,8108046,senado,Senador Jean Paul Prates ,PT,RN,senador,5627
-141878,8108046,senado,Senadora Zenaide Maia ,PROS,RN,senador,5783
-141878,8108046,senado,Senador Paulo Rocha ,PT,PA,senador,374
-141878,8108046,senado,Senador Paulo Paim ,PT,RS,senador,825
-141878,8108046,senado,Senador Humberto Costa ,PT,PE,senador,5008
-141878,8108299,senado,Senador Rogério Carvalho ,PT,SE,senador,5352
-141878,8108301,senado,Senador Jaques Wagner ,PT,BA,senador,581
-141878,8108303,senado,Senador Jean Paul Prates ,PT,RN,senador,5627
-141878,8108523,senado,Senadora Zenaide Maia ,PROS,RN,senador,5783
-141878,8108546,senado,Senador Paulo Rocha ,PT,PA,senador,374
 141968,8111753,senado,Senador Rogério Carvalho ,PT,SE,senador,5352
 141968,8111549,senado,Senador Rogério Carvalho ,PT,SE,senador,5352
 144966,8894833,senado,Senador Jaques Wagner ,PT,BA,senador,581
@@ -52,3 +34,28 @@ id_principal,id_documento,casa,nome_autor,partido,uf,tipo_autor,id_autor
 144966,8894918,senado,Senador Humberto Costa ,PT,PE,senador,5008
 144966,8895061,senado,Senador Paulo Rocha ,PT,PA,senador,374
 145734,8910654,senado,Senador Fabiano Contarato ,REDE,ES,senador,5953
+145213,8901489,senado,Senador Fabiano Contarato ,REDE,ES,senador,5953
+145213,8901489,senado,Senadora Mara Gabrilli ,PSDB,SP,senador,5376
+145213,8901521,senado,Senadora Mara Gabrilli ,PSDB,SP,senador,5376
+135165,7916180,senado,Senador Mecias de Jesus ,PRB,RR,senador,6027
+135165,8039928,senado,Senador Telmário Mota ,PROS,RR,senador,5535
+135175,7916250,senado,Senador Mecias de Jesus ,PRB,RR,senador,6027
+135175,7937319,senado,Senador Telmário Mota ,PROS,RR,senador,5535
+135175,8000883,senado,Senador Telmário Mota ,PROS,RR,senador,5535
+135175,8023591,senado,Líder do REPUBLICANOS Mecias de Jesus ,REPUBLICANOS,RR,senador,6027
+135175,8023591,senado,Líder do PSC Zequinha Marinho ,PSC,PA,senador,3806
+135175,8023591,senado,Líder do CIDADANIA Alessandro Vieira ,CIDADANIA,SE,senador,5982
+135175,8023591,senado,Líder do Governo Fernando Bezerra Coelho ,MDB,PE,senador,5540
+135175,8023591,senado,Líder do PP Daniella Ribeiro ,PP,PB,senador,5998
+135175,8023591,senado,Líder do REDE Randolfe Rodrigues ,REDE,AP,senador,5012
+135175,8023591,senado,Líder do MDB Eduardo Braga ,MDB,AM,senador,4994
+135175,8023591,senado,Líder do PDT Weverton ,PDT,MA,senador,5411
+135175,8023591,senado,Líder do PODEMOS Eduardo Girão ,PODEMOS,CE,senador,5976
+135175,8023591,senado,Líder do DEM Rodrigo Pacheco ,DEM,MG,senador,5732
+135175,8027326,senado,Senador Telmário Mota ,PROS,RR,senador,5535
+141227,8075803,senado,Senador Zequinha Marinho ,PSC,PA,senador,3806
+143287,8861837,senado,Senador Luis Carlos Heinze ,PP,RS,senador,1186
+143287,8869727,senado,Senador Luis Carlos Heinze ,PP,RS,senador,1186
+143275,8861813,senado,Senador Luis Carlos Heinze ,PP,RS,senador,1186
+143275,8862680,senado,Senador Luis Carlos Heinze ,PP,RS,senador,1186
+144851,8892243,senado,Senador Luis Carlos Heinze ,PP,RS,senador,1186
